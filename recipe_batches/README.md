@@ -35,3 +35,15 @@ You can also test your implementation manually by executing `python recipe_batch
 
  * If there's a dictionary operation you aren't sure of how to perform in Python, look it up!
  * What's the _minimum_ number of loops we need to perform in order to write a working implementation?
+
+## Steps
+1. Initialize `batch_count` to 0
+2. Iterate over the recipe dict and the ingredients dict at the same time.
+3. Check each item amount and compare it to the item amount in the recipe, making sure we have enough of it in our ingredients dict to make the recipe at least once
+    3a. If we DON'T have enough of something, break, because we can't make even one whole batch in that case
+    3b. If we DO have enough, subtract the amount needed from what we have and continue
+    3c. If we have enough of each ingredient to make a batch, increment `batch_count` by 1
+    3d. Repeat Step 3
+4. return `batch_count`
+
+
