@@ -26,3 +26,5 @@ You can also test your implementation manually by executing `python stock_prices
     2B. If next item is greater than `current_min_price_so_far` AND if `current_min_price_so_far` - the current price is greater than `max_profit_so_far`, subtract `current_min_price_so_far` from the current price and store the difference in `max_profit_so_far`
  3. Repeat until we reach the end of the list
  4. If the list is sorted in descending order, aka the price only drops, we need to find the least amount of loss and save it as the `max_profit_so_far`
+ 5. set item[index + 1] - item[index] to `max_profit_so_far` 
+ 6. go through the list and do this to every element
